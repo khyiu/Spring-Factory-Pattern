@@ -1,5 +1,8 @@
 package strategy;
 
+import org.springframework.stereotype.Component;
+
+@Component("A5Landscape")
 public class PrintA5LandscapeStrategy implements IPrintStrategy{
 
 	@Override

@@ -1,5 +1,8 @@
 package strategy;
 
+import org.springframework.stereotype.Component;
+
+@Component("A5Portrait")
 public class PrintA5PortraitStrategy implements IPrintStrategy{
 
 	@Override
