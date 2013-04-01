@@ -1,3 +1,5 @@
+import model.Document;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
@@ -14,9 +16,11 @@ public class SpringFactoryPatternTest extends AbstractTestNGSpringContextTests{
 	
 	@Test
 	public void printStrategyFactoryTest(){
-		printStrategyFactory.getStrategy("DEFAULT").print();
-		printStrategyFactory.getStrategy("A5L").print();
-		printStrategyFactory.getStrategy("A5P").print();
-		printStrategyFactory.getStrategy("A5Portrait").print();
+		Document doc = new Document();
+		
+		printStrategyFactory.getStrategy("DEFAULT").print(doc);
+		printStrategyFactory.getStrategy("A5L").print(doc);
+		printStrategyFactory.getStrategy("A5P").print(doc);
+		printStrategyFactory.getStrategy("A5Portrait").print(doc);
 	}
 }
