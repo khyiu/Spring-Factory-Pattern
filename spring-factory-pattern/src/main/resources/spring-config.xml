@@ -6,9 +6,13 @@
 
 	<context:component-scan base-package="strategy" />
 	
-	<bean id="printStrategyFactory" class="org.springframework.beans.factory.config.ServiceLocatorFactoryBean"
+ 	<bean id="printStrategyFactory" class="org.springframework.beans.factory.config.ServiceLocatorFactoryBean">
 		<property name="serviceLocatorInterface" value="strategy.PrintStrategyFactory" />
 	</bean>
 	
-	
+	<alias name="A4Portrait" alias="A4P" />
+	<alias name="A4Landscape" alias="A4L" />
+	<alias name="A5Portrait" alias="A5P" />
+	<alias name="A5Landscape" alias="A5L" />
+	<alias name="A4Portrait" alias="DEFAULT" />
 </beans>
